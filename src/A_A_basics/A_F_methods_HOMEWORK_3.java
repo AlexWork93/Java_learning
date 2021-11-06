@@ -36,4 +36,21 @@ public class A_F_methods_HOMEWORK_3 {
 //    NOTE: The solution will not be accepted if there are extra spaces.
 //    NOTE: The printMegaBytesAndKiloBytes method  needs to be defined as public static like we have been doing so far in the course.
 //    NOTE: Do not add a  main method to solution code.
+
+    public static void main(String[] args) {
+        printMegaBytesAndKiloBytes(5000);
+        printMegaBytesAndKiloBytes(2500);
+        printMegaBytesAndKiloBytes(-1024);
+
+    }
+
+    public static void printMegaBytesAndKiloBytes(int kiloBytes){
+        if (kiloBytes < 1){
+            System.out.println("Invalid Value");
+        } else {
+            int resMegabytes = kiloBytes / 1024;
+            int resKilobytes = kiloBytes - resMegabytes * 1024;
+            System.out.printf("%s KB = %s MB and %s KB\n", kiloBytes, resMegabytes, resKilobytes);
+        }
+    }
 }

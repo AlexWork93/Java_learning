@@ -37,4 +37,22 @@ public class A_F_methods_HOMEWORK_5 {
     //
     //NOTE: The method isLeapYear needs to be defined as public static like we have been doing so far in the course.
     //NOTE: Do not add a  main method to solution code.
+    public static void main(String[] args) {
+        System.out.println(isLeapYear(-1600));
+        System.out.println(isLeapYear(1600));
+        System.out.println(isLeapYear(2017));
+        System.out.println(isLeapYear(2000));
+    }
+    public static boolean isLeapYear (int year){
+        if(year >=1 & year <= 9999){
+            if (year % 4 == 0){
+                if(year % 100 == 0){
+                    return year % 400 == 0;
+                }  else{
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
 }

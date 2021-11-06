@@ -31,4 +31,14 @@ public class A_F_methods_HOMEWORK_4 {
     //
     //NOTE: Do not add a  main method to solution code.
 
+    public static void main(String[] args) {
+        System.out.println(shouldWakeUp (true, 1));
+        System.out.println(shouldWakeUp (false, 2));
+        System.out.println(shouldWakeUp (true, 8));
+        System.out.println(shouldWakeUp (true, -1));
+    }
+
+    public static boolean shouldWakeUp(boolean barking, int hourOfDay){
+        return barking & ((hourOfDay >= 0 & hourOfDay < 8) | (hourOfDay > 22 & hourOfDay <= 23));
+    }
 }
