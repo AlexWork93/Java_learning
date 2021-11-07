@@ -17,5 +17,13 @@ public class A_F_methods_HOMEWORK_7 {
     //
     //NOTE: The hasEqualSum method  needs to be defined as public static like we have been doing so far in the course.
     //NOTE: Do not add a  main method to solution code.
+    public static void main(String[] args) {
+        System.out.println(hasEqualSum(1, 1, 1));
+        System.out.println(hasEqualSum(1, 1, 2));
+        System.out.println(hasEqualSum(1, -1, 0));
+    }
 
+    public static boolean hasEqualSum (int firstNumber, int secondNumber, int thirdNumber){
+        return ((firstNumber + secondNumber) == thirdNumber);
+    }
 }
