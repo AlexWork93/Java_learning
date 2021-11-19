@@ -83,13 +83,13 @@ class Lamp {
 
 class Bed {
     private String style;
-    private int pillows, height, sheet, quilt;
+    private int pillows, height, sheets, quilt;
 
-    public Bed(String style, int pillows, int height, int sheet, int quilt) {
+    public Bed(String style, int pillows, int height, int sheets, int quilt) {
         this.style = style;
         this.pillows = pillows;
         this.height = height;
-        this.sheet = sheet;
+        this.sheets = sheets;
         this.quilt = quilt;
     }
 
@@ -105,8 +105,8 @@ class Bed {
         return height;
     }
 
-    public int getSheet() {
-        return sheet;
+    public int getSheets() {
+        return sheets;
     }
 
     public int getQuilt() {
