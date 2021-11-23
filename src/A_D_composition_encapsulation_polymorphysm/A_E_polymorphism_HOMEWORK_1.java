@@ -17,7 +17,7 @@ public class A_E_polymorphism_HOMEWORK_1 {
     // Override the appropriate methods to demonstrate polymorphism in use.
     // put all classes in the one java file (this one).
     public static void main(String[] args) {
-        Car myTodayCar = getCar();
+        Cars myTodayCar = getCar();
         myTodayCar.accelerate(50);
         myTodayCar.startEngine();
         myTodayCar.setForwardGear();
@@ -26,7 +26,7 @@ public class A_E_polymorphism_HOMEWORK_1 {
         myTodayCar.setGear(5);
     }
 
-    public static Car getCar(){
+    public static Cars getCar(){
         int car = (int) (Math.random() * 3) + 1;
         switch (car) {
             case 1 -> {
@@ -89,8 +89,8 @@ class Engine extends Car_Parts{
             this.amountOfCylinders = amountOfCylinders;
             System.out.printf("Amount of cylinders is set to %s\n", this.amountOfCylinders);
         }
-        if (typeOfFuel.equalsIgnoreCase("gas") 
-                || typeOfFuel.equalsIgnoreCase("petrol") 
+        if (typeOfFuel.equalsIgnoreCase("gas")
+                || typeOfFuel.equalsIgnoreCase("petrol")
                 || typeOfFuel.equalsIgnoreCase("diesel"))
         {
             this.typeOfFuel = typeOfFuel;
@@ -124,7 +124,7 @@ class Engine extends Car_Parts{
         }else System.out.println("You should switch engine on first");
         System.out.println("=====================================================\n\n");
     }
-    
+
     public void startEngine(boolean neutralGear){
         if (switchOn){
             System.out.println("Your engine is already powered up");
@@ -138,7 +138,7 @@ class Engine extends Car_Parts{
         }
         System.out.println("=====================================================\n\n");
     }
-    
+
     public void stopEngine(boolean neutralGear){
         if (!switchOn){
             System.out.println("Your engine is already powered down");
@@ -152,7 +152,7 @@ class Engine extends Car_Parts{
         }
         System.out.println("=====================================================\n\n");
     }
-    
+
 }
 
 class Transmission extends Car_Parts{
@@ -177,7 +177,7 @@ class Transmission extends Car_Parts{
             this.amountOfGears = amountOfGears;
             System.out.printf("Amount of gears is set to %s\n", this.amountOfGears);
         }
-        
+
         if (amountOfReverseGears < 0) {
             this.amountOfReverseGears = 0;
             System.out.println("ERROR. Amount of reverse gears must be positive!");
@@ -245,18 +245,18 @@ class Transmission extends Car_Parts{
     }
 }
 
-class Car {
+class Cars {
     private String name = "I am default car";
     private Engine engine;
     private Transmission transmission;
 
-    public Car(String name, Engine engine, Transmission transmission) {
+    public Cars(String name, Engine engine, Transmission transmission) {
         this.name = name;
         this.engine = engine;
         this.transmission = transmission;
     }
 
-    public Car(Engine engine, Transmission transmission) {
+    public Cars(Engine engine, Transmission transmission) {
         this.engine = engine;
         this.transmission = transmission;
     }
@@ -286,7 +286,7 @@ class Car {
     }
 }
 
-class Hyundai extends Car {
+class Hyundai extends Cars {
     public Hyundai(Engine engine, Transmission transmission) {
         super("My name is Hyundai", engine, transmission);
     }
@@ -298,7 +298,7 @@ class Hyundai extends Car {
     }
 }
 
-class Nissan extends Car {
+class Nissan extends Cars {
     public Nissan(Engine engine, Transmission transmission) {
         super("My name is Nissan", engine, transmission);
     }
@@ -310,7 +310,7 @@ class Nissan extends Car {
     }
 }
 
-class DefaultCar extends Car {
+class DefaultCar extends Cars {
     public DefaultCar(Engine engine, Transmission transmission) {
         super(engine, transmission);
     }
