@@ -43,7 +43,7 @@ public class A_G_oop_master_HOMEWORK_1 {
         deluxe_burger.orderCheckOut();
     }
 }
-class Hamburger {
+class Hamburgerr {
     private String name;
     private String roll;
     private String mess;
@@ -55,7 +55,7 @@ class Hamburger {
     private boolean carrot = false;
     private boolean cucumber = false;
 
-    public Hamburger(String name, String roll, int price, boolean meat) {
+    public Hamburgerr(String name, String roll, int price, boolean meat) {
         this.name = name;
         this.roll = roll;
         this.price = price;
@@ -115,7 +115,7 @@ class Hamburger {
     }
 }
 
-class Health_Burger extends Hamburger {
+class Health_Burger extends Hamburgerr {
     private boolean mushrooms = false;
     private boolean zucchini = false;
     public Health_Burger(String name, int price, boolean meat) {
@@ -144,7 +144,7 @@ class Health_Burger extends Hamburger {
     }
 }
 
-class Deluxe_Burger extends Hamburger {
+class Deluxe_Burger extends Hamburgerr {
     private Chips chips;
     private Cola cola;
 
